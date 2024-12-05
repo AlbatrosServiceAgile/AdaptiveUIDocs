@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../scripting/functions/">
+        <link rel="prev" href="../sql-definition/special-cases/file-columns/">
       
       
-        <link rel="next" href="roles/">
+        <link rel="next" href="../../platform/settings/display/tables/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
-        <title>Index - AdaptiveUI Docs</title>
+        <title>Main script - AdaptiveUI Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#main-script" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="AdaptiveUI Docs" class="md-header__button md-logo" aria-label="AdaptiveUI Docs" data-md-component="logo">
+    <a href="../.." title="AdaptiveUI Docs" class="md-header__button md-logo" aria-label="AdaptiveUI Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Main script
             
           </span>
         </div>
@@ -234,7 +239,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="AdaptiveUI Docs" class="md-nav__button md-logo" aria-label="AdaptiveUI Docs" data-md-component="logo">
+    <a href="../.." title="AdaptiveUI Docs" class="md-nav__button md-logo" aria-label="AdaptiveUI Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -289,7 +294,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../getting-started/" class="md-nav__link ">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -342,7 +347,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../getting-started/initializing-the-repository/" class="md-nav__link ">
+            <a href="../../getting-started/initializing-the-repository/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -382,8 +387,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -405,11 +412,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -423,7 +430,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Developing apps
@@ -457,7 +464,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/important-concepts/" class="md-nav__link ">
+            <a href="../important-concepts/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -513,7 +520,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/repo-content/" class="md-nav__link ">
+            <a href="../repo-content/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -569,7 +576,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/app-structure/" class="md-nav__link ">
+            <a href="../app-structure/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -670,7 +677,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/sql-definition/structure/" class="md-nav__link ">
+            <a href="../sql-definition/structure/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -726,7 +733,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/sql-definition/procedures/" class="md-nav__link ">
+            <a href="../sql-definition/procedures/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -827,7 +834,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/sql-definition/special-cases/comments-lookup-table/" class="md-nav__link ">
+            <a href="../sql-definition/special-cases/comments-lookup-table/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -883,7 +890,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/sql-definition/special-cases/tags-columns/" class="md-nav__link ">
+            <a href="../sql-definition/special-cases/tags-columns/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -939,7 +946,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/sql-definition/special-cases/file-columns/" class="md-nav__link ">
+            <a href="../sql-definition/special-cases/file-columns/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -988,6 +995,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1002,16 +1011,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../developing-apps/main-script/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1023,7 +1032,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Main script
@@ -1051,10 +1060,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1068,11 +1075,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1086,7 +1093,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Platform
@@ -1097,10 +1104,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1123,11 +1128,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1141,7 +1146,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Settings
@@ -1218,7 +1223,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../display/tables/" class="md-nav__link ">
+            <a href="../../platform/settings/display/tables/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1274,7 +1279,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../display/structure/" class="md-nav__link ">
+            <a href="../../platform/settings/display/structure/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1381,7 +1386,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../scripting/functions/" class="md-nav__link ">
+            <a href="../../platform/settings/scripting/functions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1437,7 +1442,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../scripting/app-variables/" class="md-nav__link ">
+            <a href="../../platform/settings/scripting/app-variables/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1501,7 +1506,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../integrations/" class="md-nav__link ">
+            <a href="../../platform/settings/integrations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1600,7 +1605,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../views/custom-views/" class="md-nav__link ">
+            <a href="../../platform/settings/views/custom-views/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1656,7 +1661,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../views/kpi-dashboards/" class="md-nav__link ">
+            <a href="../../platform/settings/views/kpi-dashboards/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1720,7 +1725,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../languages/" class="md-nav__link ">
+            <a href="../../platform/settings/languages/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1776,7 +1781,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../file-manager/" class="md-nav__link ">
+            <a href="../../platform/settings/file-manager/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1809,10 +1814,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1825,11 +1828,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7" >
         
           
           <label class="md-nav__link" for="__nav_3_1_7" id="__nav_3_1_7_label" tabindex="0">
@@ -1843,7 +1846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_7">
             <span class="md-nav__icon md-icon"></span>
             Users
@@ -1877,7 +1880,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="users/" class="md-nav__link ">
+            <a href="../../platform/settings/users/users/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1933,7 +1936,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="roles/" class="md-nav__link ">
+            <a href="../../platform/settings/users/roles/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2062,7 +2065,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../miscellaneous/glossary/" class="md-nav__link ">
+            <a href="../../miscellaneous/glossary/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2118,7 +2121,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../miscellaneous/frontend-image/" class="md-nav__link ">
+            <a href="../../miscellaneous/frontend-image/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2174,7 +2177,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../miscellaneous/roles/" class="md-nav__link ">
+            <a href="../../miscellaneous/roles/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2230,7 +2233,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../miscellaneous/templated-views/" class="md-nav__link ">
+            <a href="../../miscellaneous/templated-views/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2283,6 +2286,157 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#up" class="md-nav__link">
+    <span class="md-ellipsis">
+      up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#down" class="md-nav__link">
+    <span class="md-ellipsis">
+      down
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      pull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      load-apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      drop-apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset-apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      reboot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lint" class="md-nav__link">
+    <span class="md-ellipsis">
+      lint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      import
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      sync-template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2300,9 +2454,115 @@
   
 
 
-  <h1>Index</h1>
-
-
+<h1 id="main-script">Main script</h1>
+<p><code>main.sh</code> is your entry point to executing scripts for the platform. This page describes the different functionalities that it provides.</p>
+<h2 id="usage">Usage</h2>
+<p>To use <code>main.sh</code>, open up a terminal in the root directory of the repository. Then, execute the script using the following syntax:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./main.sh<span class="w"> </span>&lt;COMMAND&gt;<span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
+</span></code></pre></div>
+<h2 id="commands">Commands</h2>
+<h3 id="init"><code>init</code></h3>
+<p>Sets up permissions for access to local folders mounted as docker volumes (namely <code>apps/</code> and <code>config/</code>) for <ins>Linux users</ins>.</p>
+<p>Should only be ran <ins>once</ins>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./main.sh<span class="w"> </span>init
+</span></code></pre></div>
+<blockquote>
+<p>See <a href="../../../getting-started/initializing-the-repository/index.md#setting-up-directories-permissions-linux-users-only">Initializing the repository</a></p>
+</blockquote>
+<h3 id="up"><code>up</code></h3>
+<p>Starts all docker services in containers.</p>
+<p>If docker services are already running, it will stop them first, remove their containers, re-create them and start the services again.</p>
+<p>It also automatically attempts to pull any new version of the docker images it uses.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./main.sh<span class="w"> </span>up
+</span></code></pre></div>
+<p><strong>Services include:</strong></p>
+<ul>
+<li><code>db</code>: PostgreSQL database</li>
+<li><code>server</code>: PostREST (API)</li>
+<li><code>pgadmin</code>: PGAdmin web instance (<a href="http://localhost:5050">http://localhost:5050</a>)</li>
+<li><code>front-end</code>: AdaptiveUI web instance (<a href="http://localhost:8080">http://localhost:8080</a>)</li>
+<li><code>minio</code>: Minio (S3 storage)</li>
+</ul>
+<h3 id="down"><code>down</code></h3>
+<p>Stops all running docker services.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./main.sh<span class="w"> </span>down
+</span></code></pre></div>
+<h3 id="pull"><code>pull</code></h3>
+<p>Pulls the latest docker images.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./main.sh<span class="w"> </span>pull
+</span></code></pre></div>
+<h3 id="logs"><code>logs</code></h3>
+<p>Attaches the logs of the services to the terminal.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./main.sh<span class="w"> </span>logs<span class="w"> </span><span class="o">[</span>services<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Args:</strong></p>
+<ul>
+<li><code>services</code> (opt.): The name of the docker <a href="#up">service(s)</a> to follow the logs for, separated by commas if multiple.</li>
+</ul>
+<h3 id="load-apps"><code>load-apps</code></h3>
+<p>Loads the applications specified in the arguments, or all applications within <code>apps/</code> if none specified.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./main.sh<span class="w"> </span>load-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Args:</strong></p>
+<ul>
+<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+</ul>
+<h3 id="drop-apps"><code>drop-apps</code></h3>
+<p>Drops the applications specified in the arguments, or all applications if none specified.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./main.sh<span class="w"> </span>drop-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Args:</strong></p>
+<ul>
+<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+</ul>
+<h3 id="reset-apps"><code>reset-apps</code></h3>
+<p>Reset the structure and data of the applications specified in the arguments, or all of them if not specified.</p>
+<p>Equivalent to a <a href="#drop-apps"><code>drop</code></a> followed by a <a href="#load-apps"><code>load</code></a>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./main.sh<span class="w"> </span>reset-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Args:</strong></p>
+<ul>
+<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+</ul>
+<h3 id="reboot"><code>reboot</code></h3>
+<p>Resets everything in the database except the users.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./main.sh<span class="w"> </span>reboot
+</span></code></pre></div>
+<h3 id="lint"><code>lint</code></h3>
+<p>Lint all the sql files under <code>apps/</code> using <a href="https://sqlfluff.com/"><code>sqlfluff</code></a>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./main.sh<span class="w"> </span>lint
+</span></code></pre></div>
+<h3 id="export"><code>export</code></h3>
+<p>Exports the <ins>app configuration</ins> and <ins>translation data</ins> to <code>configs/</code>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./main.sh<span class="w"> </span><span class="nb">export</span>
+</span></code></pre></div>
+<h3 id="import"><code>import</code></h3>
+<p>Imports the <ins>app configuration</ins> and <ins>translation data</ins> from <code>configs/</code>.</p>
+<p>The app configuration is imported from <code>/configs/latest</code>.</p>
+<p>The translation data is imported from <code>/configs/lang.json</code>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./main.sh<span class="w"> </span>import
+</span></code></pre></div>
+<h3 id="sync-template"><code>sync-template</code></h3>
+<p>Synchronizes the current repo with the <a href="https://github.com/AlbatrosServiceAgile/TemplateForApps">template repository</a>.</p>
+<p><strong>Usage:</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./main.sh<span class="w"> </span>sync-template
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note: Uncommitted changes</p>
+</div>
+<p>Make sure that you don't have any uncommitted changes. Otherwise, the command won't be able to proceed.</p>
 
 
 
@@ -2338,7 +2598,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../scripting/functions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../sql-definition/special-cases/file-columns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2355,7 +2615,7 @@
         
         
           
-          <a href="roles/" class="md-footer__link md-footer__link--next" aria-label="Next: Index">
+          <a href="../../platform/settings/display/tables/" class="md-footer__link md-footer__link--next" aria-label="Next: Index">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
@@ -2395,10 +2655,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.path", "navigation.indexes", "navigation.top", "navigation.sections", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.path", "navigation.indexes", "navigation.top", "navigation.sections", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

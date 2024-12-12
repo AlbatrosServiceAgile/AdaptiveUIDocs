@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>Index - AdaptiveUI Docs</title>
+        <title>File columns - AdaptiveUI Docs</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#file-columns" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              File columns
             
           </span>
         </div>
@@ -2285,6 +2290,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-the-file-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining the file columns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2302,9 +2335,42 @@
   
 
 
-  <h1>Index</h1>
+<h1 id="file-columns">File columns</h1>
+<p>AdaptiveUI provides you with the ability to define a tables' column to hold files.</p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>To be able to use the file management features, the platform needs to be linked to an S3-compatible object storage server. This can be done by configuring the following application variables in <code>Settings</code> &gt; <code>Scripting</code> &gt; <code>App variables</code>:</p>
+<ul>
+<li><code>S3_URL</code>: The server's base endpoint.</li>
+<li><code>S3_ACCESS_KEY_ID</code>: An access key id of the S3 bucket provider.</li>
+<li><code>S3_SECRET_ACCESS_KEY</code>: The secret access key associated to <code>S3_ACCESS_KEY_ID</code>.</li>
+<li><code>S3_PROXY_URL</code> (opt.): The server's proxy url. Useful especially when running the platform locally so that the docker containers can reach each-other.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note: Dev environments</p>
+<p>On development environments, these application variables will already be pre-configured so that the platform is linked with the local MinIO instance.</p>
+</div>
+<p>Then, to apply the changes made to the application variables, sync the database with your S3 provider by heading to <code>Settings</code> &gt; <code>File Manager</code> and pressing the button <code>Sync with S3</code>.</p>
+<h2 id="defining-the-file-columns">Defining the file columns</h2>
+<p>For a column to hold files, it must be defined with the <code>UUID</code> data type.</p>
+<p>It must also be marked with the functional comment <code>MANAGED_FILES</code>.</p>
+<p>Here's an example of defining a file column <code>sample_pages</code> in the <code>books</code> table of our <code>library</code> app.</p>
+<p>```sql title={'structure.sql'}
+    -- ...</p>
+<div class="language-text highlight"><pre><span></span><code>CREATE TABLE IF NOT EXISTS app_library.books (
+id SERIAL PRIMARY KEY,
+title TEXT NOT NULL,
+author TEXT NOT NULL,
+published_date DATE NOT NULL,
+genre TEXT,
+description TEXT,
+    sample_pages UUID -- This is a file column !
+);
 
-
+COMMENT ON COLUMN app_library.books.title IS &#39;MANAGED_FILES&#39;;
+-- ...
+</code></pre></div>
+<p>```</p>
+<p>You're all set to upload / download some files with AdaptiveUI!</p>
 
 
 

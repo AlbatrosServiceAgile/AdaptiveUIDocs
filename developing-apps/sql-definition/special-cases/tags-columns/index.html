@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -2380,28 +2380,30 @@
 <h2 id="instructions">Instructions</h2>
 <h3 id="application-definition-structuresql">Application definition (<code>structure.sql</code>)</h3>
 <ol>
-<li>Define the table (<table_name>) that will display a column as tags:</li>
-</ol>
+<li>
+<p>Define the table (<table_name>) that will display a column as tags:
 <div class="language-postgres highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">schema_name</span><span class="o">&gt;</span><span class="mf">.</span><span class="o">&lt;</span><span class="n">table_name</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">column_1</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">[</span><span class="mf">...</span><span class="p">]</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">tags_column_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">INT</span><span class="p">[]</span><span class="w"> </span><span class="c1">-- VERY IMPORTANT that the column is of type INT[]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&lt;</span><span class="n">column_1</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">[</span><span class="mf">...</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&lt;</span><span class="n">tags_column_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">INT</span><span class="p">[]</span><span class="w"> </span><span class="c1">-- VERY IMPORTANT that the column is of type INT[]</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">);</span>
-</span></code></pre></div>
-<ol>
-<li>Define the table (<tags_table_name>) that will hold the possible tag values:</li>
-</ol>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Define the table (<tags_table_name>) that will hold the possible tag values:
 <div class="language-postgres highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">schema_name</span><span class="o">&gt;</span><span class="mf">.</span><span class="o">&lt;</span><span class="n">tags_table_name</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">tag_id_column_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">label</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="nb">TEXT</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="n">tag_id_column_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">label</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">color</span><span class="w"> </span><span class="nb">TEXT</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">);</span>
-</span></code></pre></div>
-<ol>
-<li>Add a comment to the column <tags_column_name> to 'link' it to the <tag_id_column_name>:</li>
-</ol>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Add a comment to the column <tags_column_name> to 'link' it to the <tag_id_column_name>:
 <div class="language-postgres highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">COMMENT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">schema_name</span><span class="o">&gt;</span><span class="mf">.</span><span class="o">&lt;</span><span class="n">table_name</span><span class="o">&gt;</span><span class="mf">.</span><span class="o">&lt;</span><span class="n">tags_column_name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="s1">&#39;TAG=&lt;tags_table_name&gt;.&lt;tag_id_column_name&gt;&#39;</span><span class="p">;</span>
-</span></code></pre></div>
+</span></code></pre></div></p>
+</li>
+</ol>
 <h3 id="platform-configuration">Platform configuration</h3>
 <p>No platform configuration required.</p>
 <h2 id="example">Example</h2>
@@ -2426,6 +2428,8 @@
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="c1">-- 3) Add a comment on the tags column</span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="k">COMMENT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">app_crm</span><span class="mf">.</span><span class="n">companies</span><span class="mf">.</span><span class="n">tags</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="s1">&#39;TAG=tags.tag_id&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>
 </span></code></pre></div>
 
 
@@ -2522,7 +2526,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.indexes", "navigation.top", "navigation.sections", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

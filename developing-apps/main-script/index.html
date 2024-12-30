@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -2507,30 +2507,42 @@
 <h3 id="load-apps"><code>load-apps</code></h3>
 <p>Loads the applications specified in the arguments, or all applications within <code>apps/</code> if none specified.</p>
 <p><strong>Usage:</strong></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./main.sh<span class="w"> </span>load-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./main.sh<span class="w"> </span>load-apps<span class="w"> </span><span class="o">[</span>--apps<span class="w"> </span>&lt;app_names&gt;<span class="w"> </span><span class="o">[</span>--groups<span class="w"> </span>&lt;group_names&gt;<span class="o">]]</span>
 </span></code></pre></div>
 <p><strong>Args:</strong></p>
 <ul>
-<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-a/--apps &lt;app_names&gt;</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-g/--groups &lt;group_names&gt;</code> (opt): The name of the group of files to load, separated by commas (without any whitespace) if multiple. <blockquote>
+<p>The <code>--groups</code> option can only be used if a <ins>single app name</ins> is provided to the <code>--apps</code> argument. Also, if the specified application doesn't have a <code>build.json</code> file defined, the <code>--groups</code> option will be ignored.  </p>
+</blockquote>
+</li>
 </ul>
 <h3 id="drop-apps"><code>drop-apps</code></h3>
 <p>Drops the applications specified in the arguments, or all applications if none specified.</p>
 <p><strong>Usage:</strong></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./main.sh<span class="w"> </span>drop-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./main.sh<span class="w"> </span>drop-apps<span class="w"> </span><span class="o">[</span>--apps<span class="w"> </span>&lt;app_names&gt;<span class="w"> </span><span class="o">[</span>--groups<span class="w"> </span>&lt;group_names&gt;<span class="o">]]</span>
 </span></code></pre></div>
 <p><strong>Args:</strong></p>
 <ul>
-<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-a/--apps &lt;app_names&gt;</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-g/--groups &lt;group_names&gt;</code> (opt): The name of the group of files to load, separated by commas (without any whitespace) if multiple. <blockquote>
+<p>The <code>--groups</code> option can only be used if a <ins>single app name</ins> is provided to the <code>--apps</code> argument. Also, if the specified application doesn't have a <code>build.json</code> file defined, the <code>--groups</code> option will be ignored.  </p>
+</blockquote>
+</li>
 </ul>
 <h3 id="reset-apps"><code>reset-apps</code></h3>
 <p>Reset the structure and data of the applications specified in the arguments, or all of them if not specified.</p>
 <p>Equivalent to a <a href="#drop-apps"><code>drop</code></a> followed by a <a href="#load-apps"><code>load</code></a>.</p>
 <p><strong>Usage:</strong></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./main.sh<span class="w"> </span>reset-apps<span class="w"> </span><span class="o">[</span>app_names<span class="o">]</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./main.sh<span class="w"> </span>reset-apps<span class="w"> </span><span class="o">[</span>--apps<span class="w"> </span>&lt;app_names&gt;<span class="w"> </span><span class="o">[</span>--groups<span class="w"> </span>&lt;group_names&gt;<span class="o">]]</span>
 </span></code></pre></div>
 <p><strong>Args:</strong></p>
 <ul>
-<li><code>app_names</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-a/--apps &lt;app_names&gt;</code> (opt): The name of the applications to load, separated by commas (without any whitespace) if multiple.</li>
+<li><code>-g/--groups &lt;group_names&gt;</code> (opt): The name of the group of files to load, separated by commas (without any whitespace) if multiple. <blockquote>
+<p>The <code>--groups</code> option can only be used if a <ins>single app name</ins> is provided to the <code>--apps</code> argument. Also, if the specified application doesn't have a <code>build.json</code> file defined, the <code>--groups</code> option will be ignored.  </p>
+</blockquote>
+</li>
 </ul>
 <h3 id="reboot"><code>reboot</code></h3>
 <p>Resets everything in the database except the users.</p>
@@ -2658,7 +2670,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.path", "navigation.indexes", "navigation.top", "navigation.sections", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

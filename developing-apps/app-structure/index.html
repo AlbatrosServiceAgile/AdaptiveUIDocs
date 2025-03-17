@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -35,7 +35,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 7v2h2V7zm3 10v-2h-1v-4h-3v2h1v2h-1v2zm8-5c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2s10 4.5 10 10m-2 0c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%207v2h2V7zm3%2010v-2h-1v-4h-3v2h1v2h-1v2zm8-5c0%205.5-4.5%2010-10%2010S2%2017.5%202%2012%206.5%202%2012%202s10%204.5%2010%2010m-2%200c0-4.42-3.58-8-8-8s-8%203.58-8%208%203.58%208%208%208%208-3.58%208-8%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -2401,6 +2401,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_custom-views-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      _custom-views/ directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#structuresql" class="md-nav__link">
     <span class="md-ellipsis">
       structure.sql
@@ -2475,18 +2484,27 @@
 <p>This is the default structure, and should suit most simple use cases.</p>
 <p>Here is an overview diagram representing the most basic file structure of an app named <code>sample_app</code>, placed in the <a href="../repo-content/#apps-directory">apps/</a> directory.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apps/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── sample_app/
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── structure.sql
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── procedure.sql (opt.)
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── data/
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│       └── sampledata.sql (opt.)
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>└── ...
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── _custom-views/ # Special directory for custom view templates
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── sample_app/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── structure.sql
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├── procedure.sql (opt.)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   └── data/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│       └── sampledata.sql (opt.)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└── ...
 </span></code></pre></div>
 <p>As you can guess, every sql file must be contained within a folder named after the name of the app.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Make sure that the name of the app folder is in lower case, as otherwise the platform might have some trouble matching it to the related application in the database.</p>
 </div>
+<h3 id="_custom-views-directory"><code>_custom-views/</code> directory</h3>
+<p>This special directory contains template files for custom views that are configured to load their content from files. These files are not processed by the regular app loading mechanism but are instead handled by the <code>import-appconfig-from-json.sh</code> script when importing application configurations.</p>
+<p>To use a custom view template file:
+1. Place your template file (e.g., <code>SampleCustomView.jsx</code>) in the <code>_custom-views/</code> directory
+2. Configure the custom view in the platform with:
+   - Set "Is loaded from file" to <code>true</code>
+   - Set "Template File Name" to the filename (e.g., <code>SampleCustomView.jsx</code>)</p>
+<p>The platform will automatically load the template content from the file when importing configurations.</p>
 <h3 id="structuresql"><code>structure.sql</code></h3>
 <p>This is where the structure of the application will be defined. The SQL code for defining the schema, and any table and views To be contained within the application should be written in here.</p>
 <p>This file is mandatory (for obvious reasons).</p>
